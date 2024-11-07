@@ -13,9 +13,11 @@ Here's a summary of the code:
 **2. Network-based_NetworkX.ipynb** constructing and visualizing within-omics networks for amino acid and protein data, enabling a network-based integration of omics data.
 
 Data Loading and Preprocessing: The omics data is loaded, and the columns are split into amino acids and protein features.
+
 Within-Omics Network Construction:
 Two separate graphs (G_amino for amino acids and G_prot for proteins) are created using the NetworkX library.
 For each feature pair in both data types, an edge is added between nodes (features) if their correlation exceeds a set threshold (e.g., 0.7). This step captures high-correlation relationships, indicating potential interactions between features.
+
 Network Visualization:
 One of the networks (e.g., the amino acid network) is visualized using Matplotlib and NetworkX.
 Nodes represent features, and edges represent high-correlation relationships. Visualizing this network provides insights into the connectivity and potential functional relationships within the omics layer.
