@@ -10,7 +10,31 @@ Here's a summary of the code:
 5. Evaluation and Performance Metrics: The model's accuracy on the test set is calculated and printed. A ROC-AUC curve is plotted based on test set predictions to visualize the trade-off between sensitivity and specificity, with the AUC score indicating the model's performance.
 
 
-**2. Network-based_NetworkX.ipynb** constructing and visualizing within-omics networks for amino acid and protein data, enabling a network-based integration of omics data.
+**2. CNN-based integration.ipynb** This code implements a Convolutional Neural Network (CNN) to classify multi-omics data.
+
+1. **Data Preparation**:
+   - Loads the dataset, separates the target labels (`Label` column), and scales the features using `MinMaxScaler`.
+   - Encodes labels into a binary format (`Control` as 0 and `CRC` as 1), then transforms them into a categorical format for compatibility with the CNN.
+
+2. **Data Reshaping**:
+   - Reshapes the data to a 2D grid structure (`20x26`), simulating image-like data with a single grayscale channel.
+
+3. **Data Splitting**:
+   - Splits the reshaped data into training and testing sets.
+
+4. **CNN Model Definition**:
+   - Builds a CNN with two convolutional layers followed by max-pooling and dropout layers to reduce overfitting.
+   - A final dense layer with `softmax` activation is used for binary classification.
+
+5. **Model Compilation and Training**:
+   - Compiles the model using the Adam optimizer and binary cross-entropy loss.
+   - Trains the model with early stopping based on validation loss to prevent overfitting.
+
+6. **Evaluation and Visualization**:
+   - Evaluates the model’s performance on the test set, printing the test accuracy.
+   - Plots the training and validation accuracy over epochs to visualize the model’s learning progress. 
+
+**3. Network-based_NetworkX.ipynb** constructing and visualizing within-omics networks for amino acid and protein data, enabling a network-based integration of omics data.
 
 Data Loading and Preprocessing: The omics data is loaded, and the columns are split into amino acids and protein features.
 
